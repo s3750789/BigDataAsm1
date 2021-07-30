@@ -31,6 +31,7 @@ docker-compose -f owm-producer/docker-compose.yml up -d
 
 docker-compose -f twitter-producer/docker-compose.yml up
 
+docker-compose -f ghibli-producer/docker-compose.yml up -d
 # Consumer
 cd .\consumers\   =====>    docker build -t twitterconsumer .
 
@@ -38,4 +39,21 @@ cd ..             =====>    docker-compose -f consumers/docker-compose.yml up --
 
 # Visual 
 docker-compose -f data-vis/docker-compose.yml up -d --build
+
+# Tear down
+$ docker-compose -f data-vis/docker-compose.yml down 
+
+$ docker-compose -f consumers/docker-compose.yml down          
+
+$ docker-compose -f owm-producer/docker-compose.yml down   
+
+$ docker-compose -f faker-producer/docker-compose.yml down
+
+$ docker-compose -f ghibli-producer/docker-compose.yml down
+
+$ docker-compose -f twitter-producer/docker-compose.yml down   
+
+$ docker-compose -f kafka/docker-compose.yml down              
+
+$ docker-compose -f cassandra/docker-compose.yml down          
 
