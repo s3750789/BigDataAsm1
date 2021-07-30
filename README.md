@@ -16,3 +16,9 @@ select * from twitterdata;
 select * from weatherreport;
 
 select * from fakerdata;
+
+# Kafka
+
+docker-compose -f kafka/docker-compose.yml up -d --build
+
+
