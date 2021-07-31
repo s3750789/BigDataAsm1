@@ -31,9 +31,9 @@ docker-compose -f faker-producer/docker-compose.yml up -d
 
 docker-compose -f owm-producer/docker-compose.yml up -d 
 
-docker-compose -f twitter-producer/docker-compose.yml up
-
 docker-compose -f ghibli-producer/docker-compose.yml up -d
+
+docker-compose -f twitter-producer/docker-compose.yml up
 # Consumer
 cd .\consumers\   =====>    docker build -t twitterconsumer .
 
